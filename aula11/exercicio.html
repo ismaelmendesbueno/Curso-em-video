@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <h1>Localizaçao</h1>
+    <input type="text" id="localizaçao" placeholder="Digite sua localizaçao">
+    <input type="button" value="local" onclick="local()">
+
+    <div id="res">
+
+    </div>
+
+    <script>
+        
+    function local (){
+        var t = document.querySelector("#localizaçao")
+        var res = document.querySelector("#res")
+        var txt = (t.value)
+        
+       if (txt == 'Brasil'){
+           res.innerHTML = "Voce é brasileiro"
+       }else {
+           res.innerHTML = "Voce é estrangeiro"
+       }
+    }
+    </script>
+</body>
+</html>

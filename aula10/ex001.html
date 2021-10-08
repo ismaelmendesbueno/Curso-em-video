@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento DOM</title>
+    <style>
+        #area {
+            font: normal 15pt Arial;
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            color: white;
+            text-align: center;
+            line-height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="area">
+       <h1> Interaja...</h1>
+    </div>
+
+    <script>
+        var evento = document.querySelector("#area")
+        evento.addEventListener("click", clicar)
+        evento.addEventListener("mouseenter", entrar)
+        evento.addEventListener("mouseout", sair)
+        
+        function clicar(){
+            evento.innerHTML = "Fui clicado"
+            evento.style.background = "red"
+        }
+
+        function entrar(){
+            evento.innerHTML = "entrei"
+        }
+
+        function sair() {
+            evento.innerHTML = "sai"
+            evento.style.background = "green"
+        }
+       
+    </script>
+</body>
+</html>
